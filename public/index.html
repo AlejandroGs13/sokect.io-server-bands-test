@@ -20,11 +20,25 @@
             console.log('Desconectado del servidor')
         });
 
-        socket.emit('mensaje',{nombre:'David'})
+       
 
         socket.on('mensaje',(msj)=>{
             console.log(msj);
         })
+
+
+        socket.on('active-bands',(msj)=>{
+            console.clear();
+            console.table(msj);
+        })
+
+        socket.on('nuevo-mensaje',(msj)=>{
+            console.log(msj);
+        })
+
+
+        
+        
     </script>
 </body>
 </html>
